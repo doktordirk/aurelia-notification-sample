@@ -23,7 +23,8 @@ export class Welcome {
   submit() {
     this.previousValue = this.fullName;
     this.notification.success(`Welcome`);
-    this.notification.error(`${this.fullName}!`);
+    this.notification.error(`${this.fullName}!`)
+    .then(() => this.notification.success(`Welcome`, {translate:false}))
   }
 
   canDeactivate() {

@@ -6,7 +6,16 @@ export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
     .developmentLogging()
-    .plugin('aurelia-i18n', (instance) => {
+    .plugin('aurelia-notification', config => {
+        config.configure({
+          translate: true,  // 'true' needs aurelia-i18n to be configured
+          notifications: {
+            'success': '',
+            'some': 'my-error'
+          }
+        });
+    })
+      .plugin('aurelia-i18n', (instance) => {
       // register backend plugin
       instance.i18next.use(XHR);
 

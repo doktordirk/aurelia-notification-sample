@@ -2,9 +2,9 @@ module.exports = {
   "bundles": {
     "dist/app-build": {
       "includes": [
-        "[*.js]",
-        "*.html!text",
-        "*.css!text"
+        "[**/*.js]",
+        "**/*.html!text",
+        "**/*.css!text"
       ],
       "options": {
         "inject": true,
@@ -15,6 +15,8 @@ module.exports = {
     },
     "dist/aurelia": {
       "includes": [
+        "aurelia-notification",
+        "aurelia-i18n",
         "aurelia-framework",
         "aurelia-bootstrapper",
         "aurelia-fetch-client",
@@ -27,9 +29,12 @@ module.exports = {
         "aurelia-loader-default",
         "aurelia-history-browser",
         "aurelia-logging-console",
+        "jquery",
         "bootstrap",
         "bootstrap/css/bootstrap.css!text",
-        "jquery"
+        "humane-js",
+        "humane-js/themes/libnotify.css!text",
+        "i18next-xhr-backend"
       ],
       "options": {
         "inject": true,

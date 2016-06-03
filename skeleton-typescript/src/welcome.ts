@@ -4,10 +4,10 @@ import {Notification} from 'aurelia-notification';
 
 @inject(Notification)
 export class Welcome {
-  heading: string = 'Welcome to the Aurelia Navigation App!';
-  firstName: string = 'John';
-  lastName: string = 'Doe';
-  previousValue: string = this.fullName;
+  heading = 'Welcome to the Aurelia Navigation App';
+  firstName = 'John';
+  lastName = 'Doe';
+  previousValue = this.fullName;
   notification: Notification;
 
   constructor(notification: Notification) {
@@ -26,7 +26,8 @@ export class Welcome {
   submit() {
     this.previousValue = this.fullName;
     this.notification.success(`Welcome`);
-    this.notification.error(`${this.fullName}!`);
+    this.notification.error(`${this.fullName}!`)
+    .then(() => this.notification.success(`Welcome`, {translate:false}))
   }
 
   canDeactivate() {
