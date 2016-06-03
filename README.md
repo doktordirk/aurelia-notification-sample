@@ -13,7 +13,7 @@ This is a skeleton for an [Aurelia](http://aurelia.io/) client using [aurelia-no
 For typescript, replace `cd skeleton-es2016` below with `cd skeleton-typecript`.
 
 ```sh
-git clone https://github.com/dirkeisinger/aurelia-notification-sample
+git clone https://github.com/doktordirk/aurelia-notification-sample
 cd aurelia-notification-sample
 npm install
 cd skeleton-es2016
@@ -28,7 +28,7 @@ This builds the aurelia-skeleton and serves at localhost:9000.
 ### For ES6-Webpack
 
 ```sh
-git clone https://github.com/dirkeisinger/aurelia-notification-sample
+git clone https://github.com/doktordirk/aurelia-notification-sample
 cd aurelia-notification-sample
 npm install
 cd skeleton-es2016-webpack
